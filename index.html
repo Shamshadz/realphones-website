@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realphones web landing page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <nav>
+            <div class="logo">
+                <img src="images/logo.png">
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#" >Home</a></li>
+                    <li><a href="#" >Service</a></li>
+                    <li><a href="#" >Contact</a></li>
+                    <li><a href="#" >cart</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="information">
+            <div class="overlay">
+                
+            </div>
+            <img src="images/mobile.png" class="mobile">
+            <div id="circle">
+                <div class="features one">
+                    <img src="images/camera.png" >
+                    <h1>Camera</h1>
+                    <p>12mp, wide Angle lens</p>
+                </div>
+                <div class="features two">
+                    <img src="images/processor.png" >   
+                    <h1>Processor</h1>
+                    <p>Snapdragon 850</p>
+                </div>
+                <div class="features three">
+                    <img src="images/display.png" >
+                    <h1>Display</h1>
+                    <p>6.5" Narrow edge screen</p>
+                </div>
+                <div class="features four">
+                    <img src="images/battery.png" >
+                    <h1>Battery</h1>
+                    <p>5400mAh Battery StandBy</p>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <img src="images/arrow.png" id="upbtn" >
+            <h3>Features</h3>
+            <img src="images/arrow.png" id="downbtn">
+        </div>
+    </div>
+
+    <script>
+        let circle= document.getElementById("circle");
+        let upbtn= document.getElementById("upbtn");
+        let downbtn= document.getElementById("downbtn");
+
+        let rotatevalue  = circle.style.transform;
+        let rotatesum;
+
+        upbtn.onclick = function()
+        {
+            rotatesum = rotatevalue +"rotate(-90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+        downbtn.onclick = function()
+        {
+            rotatesum = rotatevalue +"rotate(90deg)";
+            circle.style.transform = rotatesum;
+            rotatevalue = rotatesum;
+        }
+    </script>
+</body>
+</html>
